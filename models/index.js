@@ -41,3 +41,4 @@ module.exports = { User, Review, Book };
 
  // through: "books_has_reviews",
 // as: "reviews_now"
+//
