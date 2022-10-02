@@ -12,7 +12,7 @@ Review.init(
       autoIncrement: true,
     },
     userReview: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
     },
     date_created: {
       type: DataTypes.DATE,

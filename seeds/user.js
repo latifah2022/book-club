@@ -4,7 +4,7 @@ const { faker } = require('@faker-js/faker');
 const _USER = [];
 for (let i = 0; i < 5; i++) {
   _USER.push({
-    userName: faker.name.fullName(),
+    name: faker.name.fullName(),
     email: faker.internet.email(),
     password: faker.internet.password()
   });
