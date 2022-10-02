@@ -1,0 +1,48 @@
+<div class="row">
+  <div class="col-auto">
+    <h2>Welcome, {{name}}!</h2>
+  </div>
+</div>
+
+<div class="row mt-4">
+  <div class="col-md-6">
+    <h3>Create a New Project:</h3>
+
+    <form class="form new-book-form">
+      <div class="form-group">
+        <label for="book-name">project name:</label>
+        <input class="form-input" type="text" id="book-name" name="book-name" />
+      </div>
+      <div class="form-group">
+        <label for="book-reviews">Revies:</label>
+        <input class="form-input" type="number" id="book-reviews" name="book-reviews" />
+      </div>
+      <div class="form-group">
+        <label for="book-desc">description:</label>
+        <textarea class="form-input" id="book-desc" name="book-desc"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Create</button>
+      </div>
+    </form>
+  </div>
+
+  {{#if book.length}}
+  <div class="col-md-6 project-list">
+    <h3>Current Book:</h3>
+
+    {{#each book as |book|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/project/{{book.id}}">{{book.name}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{book.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>
+
+<script src="./js/profile.js"></script>
