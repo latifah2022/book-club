@@ -8,7 +8,7 @@ const newFormHandler = async (event) => {
   if (name && needed_funding && description) {
     const response = await fetch(`/api/projects`, {
       method: 'POST',
-      body: JSON.stringify({ name, needed_funding, description }),
+      body: JSON.stringify({ name, needed_review, description }),
       headers: {
         'Content-Type': 'application/json',
       },
@@ -17,7 +17,7 @@ const newFormHandler = async (event) => {
     if (response.ok) {
       document.location.replace('/profile');
     } else {
-      alert('Failed to create project');
+      alert('Failed to create book');
     }
   }
 };
@@ -33,15 +33,15 @@ const delButtonHandler = async (event) => {
     if (response.ok) {
       document.location.replace('/profile');
     } else {
-      alert('Failed to delete project');
+      alert('Failed to delete book');
     }
   }
 };
 
 document
-  .querySelector('.new-project-form')
+  .querySelector('.new-book-form')
   .addEventListener('submit', newFormHandler);
 
 document
-  .querySelector('.project-list')
+  .querySelector('.book-list')
   .addEventListener('click', delButtonHandler);
