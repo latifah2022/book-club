@@ -5,12 +5,7 @@
     <h2>
       <a href="/book/{{book.id}}">{{book.name}}</a>
     </h2>
-
-    <p>
-      <!-- Pass needed_funding value to the helper function -->
-      <span class="review">{{book.needed_reviews}}</span>
-    </p>
-
+    {{!-- if we have time, we can add a photo of the cover of the book --}}
     <p>Reviewed by {{book.user.name}} on {{format_date review.date_created}}</p>
   </div>
   
