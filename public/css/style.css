@@ -1,6 +1,6 @@
 adding file so that it will come through github
 
-header, .project:not(:last-child) {
+header, .book:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
 
@@ -19,8 +19,40 @@ header, .project:not(:last-child) {
   text-decoration: underline;
 }
 
-.dollar-amount {
+.reviews-amount {
   color: #056605;
   font-weight: bold;
   margin-left: -5px;
+}
+
+.container {
+  color: #C3E0E5;
+}
+
+.text-center {
+  color: aqua;
+}
+
+.btn {
+  color:black
+}
+
+.row {
+  color: #274472;
+}
+
+.col {
+  color: blueviolet;
+}
+
+.form {
+  color: aquamarine;
+}
+
+.form-group {
+  color: #41729F;
+}
+
+.form-input {
+  color:chartreuse
 }
