@@ -27,7 +27,7 @@ router.get('/book/:id', async (req, res) => {
     const bookData = await Book.findByPk(req.params.id, {
       include: [
         {model: User, attributes: {exclude: ['password', 'email']}},
-        {model: Review},
+        {model: Review, include: [{model: User}]},
       ]
     });
 
