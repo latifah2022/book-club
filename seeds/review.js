@@ -8,5 +8,5 @@ for (let i = 0; i < 5; i++) {
     date: faker.date.between()
   });
 }
-const seedReview = () => Review.bulkCreate(_REVIEW);
-module.exports = seedReview;
+// const seedReview = () => Review.bulkCreate(_REVIEW);
+module.exports = _REVIEW;

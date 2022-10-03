@@ -1,0 +1,17 @@
+[
+    {
+        "name": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "description": "Set in Jazz Age New York, it tells the tragic story of Jay Gatsby, a self-made millionaire, and his pursuit of Daisy Buchanan, a wealthy young woman whom he loved in his youth"
+    },
+    {
+        "name": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "description": "To Kill a Mockingbird is both a young girl's coming-of-age story and a darker drama about the roots and consequences of racism and prejudice, probing how good and evil can coexist within a single community or individual."
+    },
+    {
+        "name": "Nineteen Eighty-Four",
+        "author": "George Orwell",
+        "description": "The book is set in 1984 in Oceania, one of three perpetually warring totalitarian states (the other two are Eurasia and Eastasia). Oceania is governed by the all-controlling Party, which has brainwashed the population into unthinking obedience to its leader, Big Brother."
+    }
+]
