@@ -3,18 +3,17 @@
 <div class="row mb-4 book">
   <div class="col-md-5">
     <h2>
-      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-      {{{get_emoji}}}
       <a href="/book/{{book.id}}">{{book.name}}</a>
     </h2>
+
     <p>
-      <span for="img" aria-label="notes">📝 </span>
       <!-- Pass needed_funding value to the helper function -->
-      <span class="review-amount">{{format_amount book.needed_reviews}}</span>
-      needed!
+      <span class="review">{{book.needed_reviews}}</span>
     </p>
-    <p>Created by {{book.user.name}} on {{format_date review.date_created}}</p>
+
+    <p>Reviewed by {{book.user.name}} on {{format_date review.date_created}}</p>
   </div>
+  
   <div class="col-md-7">
     <p>
       {{book.description}}
