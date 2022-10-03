@@ -1,14 +1,21 @@
 <div class="text-center">
-  <h2>{{name}}</h2>
+  <h2>{{book.name}}</h2>
   {{!-- <P>{{PHOTO}}</P> IF WE HAVE TIME, WE CAN GET TO THIS --}}
-  <p>{{description}}</p>
-  <p>Created by {{user.name}} on {{format_date date_created}}</p>
+  <p>{{book.description}}</p>
+
   <p>
-    <span for="img" aria-label="notes">📝 </span>
-    <span class="reviews-amount">{{format_amount needed_reviews}}</span>
-    needed
+    <span class="reviews">{{user.review}}</span>
+    <p>Created by {{user.name}} on {{format_date date_created}}</p>
   </p>
-  <p>
-    <button class="btn btn-primary">Write a Review!</button>
-  </p>
+
+  <form class="form review-form">
+    <div class="form-group">
+      <label for="book-desc">Add your review:</label>
+      <textarea class="form-input" id="book-desc" name="book-desc"></textarea>
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary">Create</button>
+    </div>
+  </form>
+
 </div>
