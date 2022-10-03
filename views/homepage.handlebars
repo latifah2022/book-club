@@ -1,12 +1,12 @@
 <!-- Loop over each object in the projects array -->
-{{#each book as |book| }}
+{{#each books as |book| }}
 <div class="row mb-4 book">
   <div class="col-md-5">
     <h2>
       <a href="/book/{{book.id}}">{{book.name}}</a>
     </h2>
     {{!-- if we have time, we can add a photo of the cover of the book --}}
-    <p>Reviewed by {{book.user.name}} on {{format_date review.date_created}}</p>
+    <p>Reviewed by {{book.reviews.[0].user.name}} on {{format_date book.reviews.[0].date_created}}</p>
   </div>
   
   <div class="col-md-7">
