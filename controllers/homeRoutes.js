@@ -1,6 +1,26 @@
 const router = require('express').Router();
-const { User, Book } = require('../models');
+const { User, Book, Review } = require('../models');
 const withAuth = require('../utils/auth');
+
+router.get('/', async (req, res) => {
+  try {
+    const bookData = await Book.findAll({
+      include: [{ model: User, Review }]
+    });
+
+    const books = bookData.map((book) => book.get({ plain: true }));
+
+    res.render('homepage', {
+      books,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+
+
 
 
 router.get('/profile', withAuth, async (req, res) => {
