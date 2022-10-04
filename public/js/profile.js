@@ -2,20 +2,21 @@ const newFormHandler = async (event) => {
   event.preventDefault();
 
   const name = document.querySelector('#book-name').value.trim();
-  const needed_review = document.querySelector('#book-reviews').value.trim(); 
+  const author = document.querySelector('#book-author').value.trim(); 
   const description = document.querySelector('#book-desc').value.trim();
 
-  if (name && needed_review && description) {
-    const response = await fetch(`/api/book`, {  //have to get rid of projects - i think turn it to homepage?
+  if (name && author && description) {
+    const response = await fetch(`/api/book/newbook`, {  
       method: 'POST',
-      body: JSON.stringify({ name, needed_review, description }), //have to edit the t
+      body: JSON.stringify({ 
+        name, author, description }), 
       headers: {
         'Content-Type': 'application/json',
       },
     });
 
     if (response.ok) {
-      document.location.replace('/books');
+      document.location.replace('/');
     } else {
       alert('No book found');
     }
@@ -42,6 +43,6 @@ document
   .querySelector('.new-book-form')
   .addEventListener('submit', newFormHandler);
 
-document
-  .querySelector('.book-list')
-  .addEventListener('click', delButtonHandler);
+// document
+//   .querySelector('.book-list')
+//   .addEventListener('click', delButtonHandler);
