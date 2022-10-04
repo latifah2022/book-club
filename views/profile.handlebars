@@ -6,43 +6,66 @@
 
 <div class="row mt-4">
   <div class="col-md-6">
-    <h3>Create a New Project:</h3>
+    <h3>Have a book recommendation? Add it to the list!</h3>
 
     <form class="form new-book-form">
       <div class="form-group">
-        <label for="book-name">project name:</label>
+        <label for="book-name">Book Title:</label>
         <input class="form-input" type="text" id="book-name" name="book-name" />
       </div>
       <div class="form-group">
-        <label for="book-reviews">Revies:</label>
+        <label for="book-reviews">Author:</label>
         <input class="form-input" type="number" id="book-reviews" name="book-reviews" />
       </div>
       <div class="form-group">
-        <label for="book-desc">description:</label>
+        <label for="book-desc">Description:</label>
         <textarea class="form-input" id="book-desc" name="book-desc"></textarea>
       </div>
       <div class="form-group">
-        <button type="submit" class="btn btn-primary">Create</button>
+        <button type="submit" class="btn btn-primary">Add it to the list!</button>
       </div>
     </form>
   </div>
 
-  {{#if book.length}}
+{{!-- MY RECOMMENDATIONS --}}
+  {{#if books.length}}
   <div class="col-md-6 project-list">
-    <h3>Current Book:</h3>
+    <h3>My Recommendations:</h3>
 
-    {{#each book as |book|}}
+    {{#each books as |book|}}
     <div class="row mb-2">
       <div class="col-md-8">
         <h4><a href="/book/{{book.id}}">{{book.name}}</a></h4>
       </div>
       <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{book.id}}">DELETE</button>
+        <button class="btn btn-sm btn-danger" data-id="{{book.id}}">Delete Recommendation</button> 
       </div>
     </div>
     {{/each}}
   </div>
   {{/if}}
 </div>
+
+{{!-- MY REVIEWS --}}
+  {{#if book.length}}
+  <div class="col-md-6 project-list">
+    <h3>My Reviews:</h3>
+
+    {{#each reviews as |review|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/book/{{review.id}}">{{userReview}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{review.id}}">Delete Review</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>
+
+
+
 
 <script src="./js/profile.js"></script>

@@ -4,14 +4,15 @@
   <p>{{description}}</p>
 
   <p>
+    <h3>Reviews:</h3>
     <span class="reviews">{{reviews.[0].userReview}}</span>
-    <p>Reviewed by {{reviews.[0].user.name}} on {{format_date reviews.[0].date_created}}</p>
+    <p> - {{reviews.[0].user.name}} on {{format_date reviews.[0].date_created}}</p>
   </p>
 
   <form class="form review-form">
     <div class="form-group">
-      <label for="book-desc">Add your review:</label>
-      <textarea class="form-input" id="book-desc" name="book-desc"></textarea>
+      <label for="review">Add your review:</label>
+      <textarea class="form-input" id="book-desc" name="review"></textarea>
     </div>
     <div class="form-group">
       <button type="submit" class="btn btn-primary">Create</button>
