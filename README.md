@@ -39,7 +39,6 @@
   * Express.js
   * mySQL
   * Sequelize
-  * Inquirer
   * Insomnia
   * Express-Handlebars
   * bcrypt
