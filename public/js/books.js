@@ -1,11 +1,8 @@
 async function editFormHandler(event) {
     event.preventDefault();
-    const  book_name = document.querySelector('#book_name').value;
-    const description = document.querySelector('#description').value;
-    const user_name = document.querySelector('#user_name').value;
-    
 
-  
+    const userReview = document.querySelector('#book-review').value;
+    
     const id = window.location.toString().split('/')[
       window.location.toString().split('/').length - 1
     ];
@@ -14,8 +11,7 @@ async function editFormHandler(event) {
     const response = await fetch(`/api/review/${id}`, {
       method: 'POST',
       body: JSON.stringify({
-        description,
-        user_id,
+        userReview,
       }),
       headers: {
         'Content-Type': 'application/json',
@@ -23,10 +19,10 @@ async function editFormHandler(event) {
     });
   
     if (response.ok) {
-      document.location.push(`/review/${id}`);
+      document.location.replace(`/book/${id}`);
     } else {
       alert('Failed add review');
     }
   }
   
-  document.querySelector('.add-books-form').addEventListener('submit', editFormHandler);
+  document.querySelector('.review-form').addEventListener('submit', editFormHandler);
