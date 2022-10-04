@@ -13,7 +13,7 @@
   * [Questions](#questions)
   
   ## Description
-  An application that allows you create your own book club by adding in books and posting reviews about the books.  The application has various `GET` and `POST` routes in order for this process to occur.  The project is still being developed to add other features to update and delete reviews or books.
+  An application that allows you create your own book club by adding in books and posting reviews about the books.  The application has various `GET` and `POST` routes in order for this process to occur.  The project is still being developed to add other features, for example - updating and deleting reviews.
   
   ## Usage
   To use the applicaiton you can clone the repository.  Once cloned, you will needs Node.js installed as well to run the commands in the CLI, (Command Line Inteface), of your console's terminal along with mySQL to create the database and seed the data.  You will also need to create your own env file to link mySQL while the terminal is running.  To start the application you can run `node server.js` or `npm run start` in the console and once the database is created, you can run `node seed/index.js` in your terminal to seed the data into the database.  The fully deployed application can be found in the `Links` section next to the `Live Site` tab.
@@ -39,7 +39,6 @@
   * Express.js
   * mySQL
   * Sequelize
-  * Inquirer
   * Insomnia
   * Express-Handlebars
   * bcrypt
