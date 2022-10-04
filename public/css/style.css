@@ -20,7 +20,7 @@ header, .book:not(:last-child) {
 }
 
 .reviews-amount {
-  color: #056605;
+  color: #145DA0;
   font-weight: bold;
   margin-left: -5px;
 }
@@ -30,7 +30,7 @@ header, .book:not(:last-child) {
 }
 
 .text-center {
-  color: aqua;
+  color: #0C2D48;
 }
 
 .btn {
@@ -41,18 +41,15 @@ header, .book:not(:last-child) {
   color: #274472;
 }
 
-.col {
-  color: blueviolet;
-}
 
 .form {
-  color: aquamarine;
+  color: #111313;
 }
 
 .form-group {
-  color: #41729F;
+  color: #090a0b;
 }
 
 .form-input {
-  color:chartreuse
+  color: #2D649F;
 }
