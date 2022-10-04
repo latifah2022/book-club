@@ -1,4 +1,3 @@
-// adding file so that it will come through github
 
 const router = require('express').Router();
 const { Review } = require('../../models');

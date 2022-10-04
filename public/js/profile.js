@@ -24,6 +24,7 @@ const newFormHandler = async (event) => {
 };
 
 const delButtonHandler = async (event) => {
+  console.log('deleting book')
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
 
@@ -43,6 +44,6 @@ document
   .querySelector('.new-book-form')
   .addEventListener('submit', newFormHandler);
 
-// document
-//   .querySelector('.book-list')
-//   .addEventListener('click', delButtonHandler);
+document
+  .querySelector('.book-list')
+  .addEventListener('click', delButtonHandler);
