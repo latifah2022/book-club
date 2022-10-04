@@ -2,13 +2,13 @@ const newFormHandler = async (event) => {
   event.preventDefault();
 
   const name = document.querySelector('#book-name').value.trim();
-  const needed_review = document.querySelector('#book-reviews').value.trim();
+  const needed_review = document.querySelector('#book-reviews').value.trim(); 
   const description = document.querySelector('#book-desc').value.trim();
 
   if (name && needed_review && description) {
-    const response = await fetch(`/api/projects`, {
+    const response = await fetch(`/api/book`, {  //have to get rid of projects - i think turn it to homepage?
       method: 'POST',
-      body: JSON.stringify({ name, needed_review, description }),
+      body: JSON.stringify({ name, needed_review, description }), //have to edit the t
       headers: {
         'Content-Type': 'application/json',
       },

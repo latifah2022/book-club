@@ -6,7 +6,7 @@
       <a href="/book/{{book.id}}">{{book.name}}</a>
     </h2>
     {{!-- if we have time, we can add a photo of the cover of the book --}}
-    <p>Reviewed by {{book.reviews.[0].user.name}} on {{format_date book.reviews.[0].date_created}}</p>
+    <p>By {{book.author}}</p>
   </div>
   
   <div class="col-md-7">
