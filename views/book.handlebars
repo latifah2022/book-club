@@ -5,14 +5,16 @@
 
   <p>
     <h3>Reviews:</h3>
-    <span class="reviews">{{reviews.[0].userReview}}</span>
-    <p> - {{reviews.[0].user.name}} on {{format_date reviews.[0].date_created}}</p>
+    {{#each reviews as |review|}}
+    <span class="reviews">{{review.userReview}}</span>
+    <p> - {{review.user.name}} on {{format_date review.date_created}}</p>
+    {{/each}}
   </p>
 
   <form class="form review-form">
     <div class="form-group">
       <label for="review">Add your review:</label>
-      <textarea class="form-input" id="book-desc" name="review"></textarea>
+      <textarea class="form-input" id="book-review" name="review"></textarea>
     </div>
     <div class="form-group">
       <button type="submit" class="btn btn-primary">Create</button>
@@ -20,3 +22,4 @@
   </form>
 
 </div>
+<script src="/js/books.js"></script>
