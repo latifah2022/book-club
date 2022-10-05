@@ -22,6 +22,10 @@
     This project is covered under MIT license.  Click on the license badge at the top of the README to learn more.
   
   ## Screenshots
+  <img src="./images/homepg.png" alt="Screenshot of homepage">
+  <img src="./images/loginpg.png" alt="Screenshot of login page">
+  <img src="./images/bookpg.png" alt="Screenshot of book page">
+  <img src="./images/profilepg.png" alt="Screenshot of profile page">
 
   ## Contributors
 
