@@ -49,7 +49,7 @@
   
   * Repo:  https://github.com/latifah2022/book-club
 
-  * Live Site:  
+  * Live Site:   https://secret-harbor-07074.herokuapp.com/
 
   ## Questions
   Have questions about this project?  
